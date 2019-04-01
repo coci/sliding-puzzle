@@ -38,19 +38,168 @@ class Board:
         return self.board[choose] == " "
     
     def move(self,tile,direction):
-        if direction == 'r':
-        	direction[tile],direction[tile+1] = direction[tile+1],direction[tile]
-
-        if direction == 'l':
-        	direction[tile],direction[tile-1] = direction[tile-1],direction[tile]
-
-        if direction == 'u':
-        	direction[tile],direction[tile+3] = direction[tile+3],direction[tile]
-
-        if direction == 'd':
-        	direction[tile],direction[tile-3] = direction[tile-3],direction[tile]
-
-
+        
+        s1 = tile
+        
+        if s1 == 1:
+            if direction == 'r' :
+                if self.board[2]== " ":
+                    self.board[1],self.board[2] = self.board[2],self.board[1]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'd':
+                if self.board[4]== " ":
+                    self.board[1],self.board[4] = self.board[4],self.board[1]
+                else:
+                    print("tile you choose to move on . is not empty")
+            else:
+                print("wrong move")
+                
+        if s1 == 2:
+            if direction == 'r' :
+                if self.board[3]== " ":
+                    self.board[2],self.board[3] = self.board[3],self.board[2]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'd':
+                if self.board[5]== " ":
+                    self.board[2],self.board[5] = self.board[5],self.board[2]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'l':
+                if self.board[1]== " ":
+                    self.board[2],self.board[1] = self.board[1],self.board[2]
+                else:
+                    print("tile you choose to move on . is not empty")
+            
+            else:
+                print("wrong move") 
+                
+        if s1 == 3:
+            if direction == 'l' :
+                if self.board[2]== " ":
+                    self.board[3],self.board[2] = self.board[2],self.board[3]
+                else:
+                    print("tile you choose to move on . is not empty")
+                
+            elif direction == 'd':
+                if self.board[6]== " ":
+                    self.board[3],self.board[6] = self.board[6],self.board[3]
+                else:
+                    print("tile you choose to move on . is not empty")
+            
+            else:
+                print("wrong move")
+                
+        if s1 == 4:
+            if direction == 'r' : 
+                if self.board[5]== " ":
+                    self.board[4],self.board[5] = self.board[5],self.board[4]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'd':
+                if self.board[7]== " ":
+                    self.board[4],self.board[7] = self.board[7],self.board[4]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'u':
+                if self.board[1]== " ":
+                    self.board[4],self.board[1] = self.board[1],self.board[4]
+                else:
+                    print("tile you choose to move on . is not empty")
+            else:
+                print("wrong move")
+                
+        if s1 == 5:
+            if direction == 'r' : 
+                if self.board[6]== " ":
+                    self.board[5],self.board[6] = self.board[6],self.board[5]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'l':
+                if self.board[4]== " ":
+                    self.board[5],self.board[4] = self.board[4],self.board[5]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'd':
+                if self.board[8]== " ":
+                    self.board[5],self.board[8] = self.board[8],self.board[5]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'u':
+                if self.board[2]== " ":
+                    self.board[5],self.board[2] = self.board[2],self.board[5]
+                else:
+                    print("tile you choose to move on . is not empty")
+            else:
+                print("wrong move")
+                
+                
+        if s1 == 6:
+            if direction == 'l' : 
+                if self.board[5]== " ":
+                    self.board[6],self.board[5] = self.board[5],self.board[6]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'd':
+                if self.board[9]== " ":
+                    self.board[6],self.board[9] = self.board[9],self.board[6]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'u':
+                if self.board[3]== " ":
+                    self.board[6],self.board[3] = self.board[3],self.board[6]
+                else:
+                    print("tile you choose to move on . is not empty")
+            else:
+                print("wrong move")
+        
+        if s1 == 7:
+            if direction == 'r' :
+                if self.board[8]== " ":
+                    self.board[7],self.board[8] = self.board[8],self.board[7]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'u':
+                if self.board[4]== " ":
+                    self.board[7],self.board[4] = self.board[4],self.board[7]
+                else:
+                    print("tile you choose to move on . is not empty")
+            else:
+            	print("wrong move")
+            
+        if s1 == 8:
+            if direction == 'r' : 
+                if self.board[9]== " ":
+                    self.board[8],self.board[9] = self.board[9],self.board[8]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'u':
+                if self.board[5]== " ":
+                    self.board[8],self.board[5] = self.board[5],self.board[8]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'l':
+                if self.board[7]== " ":
+                    self.board[8],self.board[7] = self.board[7],self.board[8]
+                else:
+                    print("tile you choose to move on . is not empty")
+            else:
+            	print("wrong move") 
+            
+        if s1 == 9:
+            if direction == 'l' :
+                if self.board[8]== " ":
+                    self.board[9],self.board[8] = self.board[8],self.board[9]
+                else:
+                    print("tile you choose to move on . is not empty")
+            elif direction == 'u':
+                if self.board[6]== " ":
+                    self.board[9],self.board[6] = self.board[6],self.board[9]
+                else:
+                    print("tile you choose to move on . is not empty")
+            else:
+            	print("wrong move")
 while True:
     let_game = Board(board_game)
     let_game.shuffle_board()
@@ -72,37 +221,8 @@ while True:
         let_game.show_board()
         
         if not let_game.check_space(user_tile):
-
-        	if user_tile == 1 :
-        		if user_direction == 'r' or user_direction == 'd':
-        			let_game.move(user_tile,user_direction)
-        	elif user_tile == 2 :
-        		if user_direction == 'r' or user_direction == 'd' or user_direction == 'l':
-        			let_game.move(user_tile,user_direction) 
-        	elif user_tile == 3 :
-        		if user_direction == 'l' or user_direction == 'd':
-        			let_game.move(user_tile,user_direction)
-        	elif user_tile == 4 :
-        		if user_direction == 'r' or user_direction == 'd' or user_direction == 'u':
-        			let_game.move(user_tile,user_direction)
-        	elif user_tile == 5 :
-        		if user_direction == 'r' or user_direction == 'd' or user_direction == 'u' or user_direction == 'l':
-        			let_game.move(user_tile,user_direction)
-        	elif user_tile == 6 :
-        		if user_direction == 'u' or user_direction == 'd' or user_direction == 'l':
-        			let_game.move(user_tile,user_direction)
-        	elif user_tile == 7 :
-        		if user_direction == 'u' or user_direction == 'r':
-        			let_game.move(user_tile,user_direction)
-        	elif user_tile == 8 :
-        		if user_direction == 'r' or user_direction == 'l' or user_direction =='u':
-        			let_game.move(user_tile,user_direction)
-        	elif user_tile == 9 :
-        		if user_direction == 'l' or user_direction == 'u':
-        			let_game.move(user_tile,user_direction)
-        	else:
-        		('wrong move')
-	        let_game.show_board()
+            let_game.move(user_tile,user_direction)
+            let_game.show_board()
             if let_game.check_wining():
                 print("wooow , you'r win the game")
                 game_on = False
